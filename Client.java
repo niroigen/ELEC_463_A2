@@ -30,6 +30,12 @@ public class Client {
     void disconnect(ClientUI clientUI) {
         try {
             if (clientSocket != null) {
+                DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+
+                String sendingSentence = "Disconnect\n";
+
+                outToServer.writeBytes(sendingSentence);
+
                 clientSocket.close();
                 clientUI.updateStatus(false);
             }
