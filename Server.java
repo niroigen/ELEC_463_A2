@@ -22,9 +22,16 @@ public class Server {
 
                 outputToClient.writeBytes("From Server: Connected...\n");
 
+                do {
+                    clientSentence = inputFromClient.readLine();
+                } while(!clientSentence.contains("Disconnect"));
+
                 connectionSocket.close();
+
+                serverUI.updateUI("Disconnect from client");
             }
         } catch (Exception ex) {
+            System.out.println(ex.getMessage());
         }
     }
 

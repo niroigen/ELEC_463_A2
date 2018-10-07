@@ -43,7 +43,7 @@ class ClientUI extends JFrame {
     }
 
     private void initComponent(){
-        connectionStatus.setBounds(100,20,200,20);
+        connectionStatus.setBounds(100,20,300,20);
         connectDisconnectButton.setBounds(130, 50, 100,30);
         connectionLog.setBounds(20,100,550,450);
 

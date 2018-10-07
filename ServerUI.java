@@ -47,7 +47,7 @@ class ServerUI extends JFrame {
     }
 
     private void initComponent(){
-        connectionStatus.setBounds(100,50,200,20);
+        connectionStatus.setBounds(100,50,300,20);
         connectionLog.setBounds(20,100,550,450);
 
         connectionStatus.setForeground(Color.RED);
